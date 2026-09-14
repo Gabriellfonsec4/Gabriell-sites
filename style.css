@@ -997,6 +997,50 @@ h2 em {
   color: #d9b56e;
 }
 
+/* PROJETO ADVOCACIA */
+
+.project__mockup--advocacia {
+  background:
+    radial-gradient(
+      circle at 75% 18%,
+      rgba(196, 163, 91, 0.3),
+      transparent 32%
+    ),
+    linear-gradient(145deg, #081723, #122b3c);
+}
+
+.mockup-screen--advocacia {
+  background:
+    linear-gradient(90deg, rgba(4, 15, 24, 0.97), rgba(7, 28, 43, 0.62)),
+    url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1000&q=70")
+      center / cover;
+}
+
+.mockup-screen--advocacia > span,
+.mockup-screen--advocacia small {
+  color: #d3b56f;
+}
+
+.mockup-screen--advocacia button {
+  background: #c9a95f;
+  color: #071722;
+}
+
+.mockup-phone__screen--advocacia {
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      rgba(211, 181, 111, 0.18),
+      transparent 35%
+    ),
+    linear-gradient(145deg, #06131d, #153348);
+  color: #d3b56f;
+}
+
+.mockup-phone__screen--advocacia span {
+  letter-spacing: -1px;
+}
+
 .project__info > div:first-child {
   display: flex;
   align-items: center;
