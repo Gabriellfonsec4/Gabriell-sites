@@ -820,6 +820,87 @@ h2 em {
   margin-left: 13px;
 }
 
+/* VANTAGENS */
+
+.benefits {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(183, 255, 60, 0.09),
+      transparent 30%
+    ),
+    var(--background-light);
+}
+
+.benefits::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.22;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.benefits .container {
+  position: relative;
+  z-index: 1;
+}
+
+.benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.benefit-card {
+  min-height: 260px;
+  padding: 34px 28px;
+  border-right: 1px solid var(--border);
+  transition: 0.3s;
+}
+
+.benefit-card:last-child {
+  border-right: 0;
+}
+
+.benefit-card:hover {
+  background: rgba(183, 255, 60, 0.045);
+}
+
+.benefit-card > span {
+  color: var(--green);
+  font: 700 10px var(--font-title);
+}
+
+.benefit-card h3 {
+  margin: 48px 0 14px;
+  font: 700 20px var(--font-title);
+}
+
+.benefit-card p {
+  color: var(--gray);
+  font-size: 11px;
+}
+
+.benefits__cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding-top: 34px;
+}
+
+.benefits__cta p {
+  color: #c5cdc8;
+  font-size: 13px;
+}
+
 /* PROJETOS */
 
 .projects {
@@ -949,6 +1030,12 @@ h2 em {
     linear-gradient(90deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.35)),
     url("https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1000&q=70")
       center / cover;
+}
+
+.mockup-screen--barber button {
+  color: #080808;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .mockup-phone {
@@ -1856,8 +1943,33 @@ h2 em {
   .about__text,
   .about__features,
   .services__grid,
+  .benefits__grid,
   .plans__grid {
     grid-template-columns: 1fr;
+  }
+
+  .benefit-card {
+    min-height: auto;
+    padding: 28px 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .benefit-card:last-child {
+    border-bottom: 0;
+  }
+
+  .benefit-card h3 {
+    margin-top: 22px;
+  }
+
+  .benefits__cta {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .benefits__cta .button {
+    width: 100%;
   }
 
   .about__features article,
@@ -1891,6 +2003,11 @@ h2 em {
 
   .mockup-screen {
     height: 290px;
+  }
+
+  .mockup-screen--barber button {
+    background: #080808;
+    color: #d9b56e;
   }
 
   .mockup-phone {
